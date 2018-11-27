@@ -1,0 +1,72 @@
+package Tower_Package;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Assignment2 {
+	
+	/**
+	 * @param arg
+	 */
+	public static void main(String arg[])
+	{
+System.setProperty("webdriver.chrome.driver", "D:\\Drivers\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		
+		//Open the site
+		driver.get("https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm");
+		
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.name("firstname")).sendKeys("Mike");
+		System.out.println(driver.findElement(By.name("firstname")).getText()); 
+		
+		driver.findElement(By.name("lastname")).sendKeys("Irvin");
+		
+		driver.findElement(By.cssSelector("input[name='sex'][value='Male']")).click();
+		
+		driver.findElement(By.cssSelector("input[name='sex'][value='Male']")).isSelected();
+		
+		driver.findElement(By.cssSelector("input[name='exp'][value='6']")).click();
+		
+		driver.findElement(By.xpath("/html/body/div[4]/div[1]/div/div[2]/div[1]/div/div[6]/div/form/table/tbody/tr[5]/td[2]/input")).sendKeys("13/11/2018");
+				
+		driver.findElement(By.cssSelector("input[name='profession'][value='Automation Tester']")).click();
+		
+		//driver.findElement(By.cssSelector("input[name ='servClass'][value ='Business']")).click();
+		
+		driver.findElement(By.name("photo")).sendKeys("C:\\Users\\ankur.rana\\Desktop\\a.JPG");
+		
+		driver.findElement(By.cssSelector("input[name='tool'][value='Selenium Webdriver']")).click();
+		
+		driver.findElement(By.cssSelector("input[name='tool'][value='Selenium Webdriver']")).isSelected();
+		
+		//List list = (List) driver.findElement(By.name("continents"));
+		java.util.List<WebElement> list = driver.findElements(By.name("continents"));
+		System.out.println(list.size());
+		
+		System.out.println("List of continents");
+		
+		for(int i=0;i<list.size();i++)
+		{
+			System.out.println(list.get(i).getText());
+		}
+		
+		Select var = new Select(driver.findElement(By.name("continents")));
+		var.selectByIndex(6);
+		
+		Select var1 = new Select(driver.findElement(By.name("selenium_commands")));
+		var1.selectByIndex(5);
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,22 @@
+package Tower_Package;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Tower_Class {
+	public static void main( String arg[]) {
+	System.setProperty("webdriver.chrome.driver","D:\\Drivers\\chromedriver.exe");
+			
+	WebDriver driver = new ChromeDriver();
+	driver.get("http://www-stg.towerhobbies.de");
+	
+	WebElement signIn = driver.findElement(By.id("SignInLink"));
+	signIn.click();
+	
+		
+    driver.close();
+	
+}
+}

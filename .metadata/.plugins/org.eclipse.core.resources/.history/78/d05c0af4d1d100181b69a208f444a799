@@ -1,0 +1,61 @@
+package Tower_Package;
+
+import java.awt.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Tower_Class {
+	
+	public static void main(String arg[])
+	{
+		try {
+	System.setProperty("webdriver.chrome.driver","D:\\Drivers\\chromedriver.exe");
+			
+	WebDriver driver = new ChromeDriver();
+	driver.get("http://www.Horizonhobby.de");
+	
+   //driver.findElement(By.id("SignInLink")).click();
+	
+	 //WebElement uilist = driver.findElement(By.className("utility_link"));
+	//java.util.List<WebElement> uiList= driver.findElements(By.className("utility_link"));
+	
+	
+	//driver.findElement(By.tagName("Anmelden")).click();
+	
+	//java.util.List<WebElement> links = driver.findElements(By.tagName("a"));
+	
+	/*System.out.println(links.size());
+
+	for (int i = 1; i<=links.size(); i=i+1)
+
+	{
+
+	System.out.println(links.get(i).getText());
+
+	}
+*/	
+	driver.findElement(By.cssSelector("a[id=SignInLink]")).click();
+	
+	
+	   }
+		
+		
+		catch(Exception e)
+		{
+			System.out.println("There is an exeption ");
+		}
+		
+		
+	}
+	
+}
+	
+
+
+
+
+

@@ -1,0 +1,27 @@
+package TestNG;
+
+import org.testng.annotations.Test;
+
+public class TestNGPriority {
+  @Test
+  public void Checkouts() 
+  {
+	  System.out.println("Checkouts ");
+  }
+  
+  @Test
+  public void Homepage()
+  {
+	  System.out.println("Homepage");
+  }
+  
+  
+  @Test(priority)
+  public void signIn()
+  {
+	  System.out.println("signIn");
+  }
+  
+  
+  
+}

@@ -1,0 +1,25 @@
+package TestNG;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class Assignment3 
+{
+
+	@Test
+  public void UserRegistration()
+  {
+
+		System.setProperty("webdriver.chrome.driver","D:\\Drivers\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www-tst.horizonhobby.com");
+		
+		driver.manage().window().maximize();
+		//driver.switchTo().alert().dismiss();
+		
+		driver.findElement(By.id("j-close")).click();;
+  }
+}

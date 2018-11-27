@@ -1,0 +1,17 @@
+package Tower_Package;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class Tower_Class {
+	public static void main( String arg[]) {
+	System.setProperty("webdriver.chrome.driver","D:\\Drivers\\chromedriver.exe");
+	
+	ChromeOptions options = new ChromeOptions();
+	options.addArguments("disable-infobars");
+	
+	WebDriver driver = new ChromeDriver();
+	driver.get("http://www.towerhobbies.de");
+}
+}

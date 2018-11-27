@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite2]">
+  <test thread-count="5" name="Test2(failed)">
+    <classes>
+      <class name="TestNG.Assignment3">
+        <parameter name="FirstName" value="Ankur"/>
+        <parameter name="address1" value="H56 Old Street"/>
+        <parameter name="ZipCode" value="122001"/>
+        <parameter name="Phone" value="4089798654"/>
+        <parameter name="LastName" value="Rana"/>
+        <parameter name="City" value="city1"/>
+        <parameter name="EmailAddress" value="assignment4@horizonhobby.com"/>
+        <parameter name="Password" value="ankur123"/>
+        <methods>
+          <include name="UserRegistration" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- TestNG.Assignment3 -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+  <test thread-count="5" name="Test3(failed)">
+    <classes>
+      <class name="TestNG.Assignment3">
+        <parameter name="EmailAddress1" value="assignment4@horizonhobby.com"/>
+        <parameter name="Password1" value="ankur123"/>
+        <methods>
+          <include name="SignIn" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- TestNG.Assignment3 -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+  <test thread-count="5" name="Test4(failed)">
+    <classes>
+      <class name="TestNG.Assignment3">
+        <parameter name="SearchKeyword" value="RTF"/>
+        <methods>
+          <include name="Search" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- TestNG.Assignment3 -->
+    </classes>
+  </test> <!-- Test4(failed) -->
+</suite> <!-- Failed suite [Suite2] -->

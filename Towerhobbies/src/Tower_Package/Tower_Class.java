@@ -1,0 +1,172 @@
+package Tower_Package;
+
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Tower_Class {
+	
+	public static void main(String arg[])
+	{
+		try {
+	System.setProperty("webdriver.chrome.driver","D:\\Drivers\\chromedriver.exe");
+			
+	WebDriver driver = new ChromeDriver();
+	driver.get("http://www.Horizonhobby.com");
+	
+	//driver.findElement(By.xpath("//*[@id=\"emailSignupLink\"]")).click();
+	
+    driver.findElement(By.id("SignInLink")).click();
+    
+    //driver.findElement(By.xpath("//input[@name='logonId']")).sendKeys("ankur.rana@ondemandagility.com");
+    
+   //String text = driver.findElement(By.xpath("//input[@name='logonId']")).getText();
+   
+   //WebElement e = driver.findElement(By.xpath("//input[@name='logonId']"));
+   //System.out.println(e.getText());
+   
+   // WebElement text2=  driver.findElement(By.xpath("//*[@id=\"WC_AccountDisplay_div_1\"]/div[1]/div/h1/text()"));
+   
+   //.System.out.println(text2);
+   
+   //System.out.println(text);
+   //System.out.println(text.length());
+    
+  // driver.findElement(By.xpath("//*[@id=\"WC_AccountDisplay_div_24\"]/a")).click();
+   //driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS );
+   
+  // driver.manage().window().maximize(); 
+   
+  // driver.manage().window().setPosition(new Point(-2000,0));
+   
+   
+   //Combo box
+   //Select var = new Select(driver.findElement(By.xpath("//*[@id=\"WC_UserRegistrationAddForm_AddressEntryForm_FormInput_country_1\"]")));
+  // var.selectByIndex(10);
+   
+  // List<WebElement> a = driver.findElements(By.xpath("//*[@id=\"WC_UserRegistrationAddForm_AddressEntryForm_FormInput_country_1\"]"));
+  // List<WebElement> l = var.getOptions();
+   //System.out.print(a.size());
+   
+   
+  /* for(int i=0; i<=a.size()-1;i++)
+   
+   {
+	   System.out.println(a.get(i).getText());
+   }
+   
+   System.out.println(driver.findElement(By.xpath("//input[@name='logonId']")).isDisplayed());
+   System.out.println(driver.findElement(By.xpath("//input[@name='logonId']")).isEnabled());
+   System.out.println(driver.findElement(By.xpath("//input[@name='logonId']")).isSelected());
+   
+   */ 
+   
+   //Checkbox
+   /*
+   driver.findElement(By.xpath("//*[@id=\"x-subscriber-landing\"]/div[1]/div[1]/label[1]")).click();
+   driver.findElement(By.xpath("//*[@id=\"field_173872\"]")).click();
+   driver.findElement(By.xpath("//*[@id=\"x-subscriber-landing\"]/div[1]/div[1]/label[2]")).click();
+   driver.findElement(By.xpath("//*[@id=\"x-subscriber-landing\"]/div[1]/div[1]/label[3]")).click();
+   
+   
+   System.out.println(driver.findElement(By.xpath("//*[@id=\"x-subscriber-landing\"]/div[1]/div[2]/label[2]")).isSelected());
+   System.out.println(driver.findElement(By.xpath("//*[@id=\"x-subscriber-landing\"]/div[1]/div[2]/label[1]")).isEnabled());
+   */
+   
+  /* System.out.println(driver.findElement(By.xpath("//input[@name='logonId']")).isDisplayed());
+   System.out.println(driver.findElement(By.xpath("//input[@name='logonId']")).isEnabled());
+   System.out.println(driver.findElement(By.xpath("//input[@name='logonId']")).isSelected());
+   */
+   
+    //driver.findElement(By.className("utility_link")).sendKeys(Keys
+    
+    //Thread.sleep(10000);
+    
+    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS );
+    
+    driver.manage().window().maximize();  
+    
+        
+   // driver.findElement(By.xpath("//input[@name='logonId']")).clear();
+    //System.out.println(driver.findElement(By.xpath("//input[@name='logonId']")).isDisplayed());
+   // System.out.println(driver.findElement(By.xpath("//input[@name='logonId']")).isEnabled());
+
+
+    
+   // System.out.println(driver.getTitle());
+    
+   // System.out.println(driver.getPageSource());
+    
+    //System.out.println(driver.getCurrentUrl());
+    //driver.navigate().to("https://www-tst.horizonhobby.com/SearchDisplay?searchTerm=heli&categoryId=&sourceDomain=&storeId=10151&catalogId=10051&langId=-1&pageSize=40&beginIndex=0&sType=SimpleSearch&resultCatEntryType=2&searchTermScope=2&showResultsPage=true&searchSource=Q&sourceDomain=&pageView=");
+	
+    //driver.navigate().back();
+   
+    
+	 //WebElement uilist = driver.findElement(By.className("utility_link"));
+	//java.util.List<WebElement> uiList= driver.findElements(By.className("utility_link"));
+	
+	
+	//driver.findElement(By.tagName("Anmelden")).click();
+	
+	//java.util.List<WebElement> links = driver.findElements(By.tagName("a"));
+	
+	/*System.out.println(links.size());
+
+	for (int i = 1; i<=links.size(); i=i+1)
+
+	{
+
+	System.out.println(links.get(i).getText());
+
+	}
+     */	
+	//driver.findElement(By.cssSelector("a[id=SignInLink][class=utility_link")).click();
+	
+	//driver.findElement(By.cssSelector("a#SignInLink.utility_link")).click();
+	
+	//driver.findElement(By.xpath("//a[@id='emailSignupLink'][@class='utility_link']")).click();
+	
+	//driver.findElement(By.linkText("Händlersuche")).click();
+	
+	//Xpath using contains
+	//driver.findElement(By.xpath("//a[contains(@id,'emailSign')]")).click();
+	
+	//Xpath using OR/And
+	//driver.findElement(By.xpath("//*[@name='logonId' and @type='text']")).sendKeys("ar00@gmx.com");	
+	//driver.findElement(By.xpath("//input[@id='WC_AccountDisplay_FormInput_logonPassword_In_Logon_1' or @type='00000']")).sendKeys("oda2014!");
+	
+	//Xpath using start-with
+	//driver.findElement(By.xpath("//a[starts-with(@id,'Store')]")).click();
+	
+	//Xpath using following
+	/*java.util.List <WebElement> listlink = driver.findElements(By.xpath("//div[@class='mainLogo']//following::div"));
+	
+	for(int i=0;i<listlink.size();i++)
+	{
+		System.out.println(listlink.get(i).getText());
+	}*/
+	
+	
+	   }
+		
+		
+		catch(Exception e)
+		{
+			System.out.println("There is an exeption "); 
+		}		
+	}
+
+}
+	
+
+
+
+
+

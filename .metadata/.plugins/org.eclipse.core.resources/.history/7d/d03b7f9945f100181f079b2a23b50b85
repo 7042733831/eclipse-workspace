@@ -1,0 +1,118 @@
+package TestNG;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class Assignment3 
+{
+
+	@Parameters({"EmailAddress","Password","FirstName","LastName","address1","City","ZipCode","Phone"})	
+@Test(priority=0)
+  public void UserRegistration(String EmailAddress,String Password,String FirstName,String LastName,String address1, String City, String ZipCode, String Phone  )
+  {
+
+		System.setProperty("webdriver.chrome.driver","D:\\Drivers\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www-tst.horizonhobby.com");
+		
+		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS );
+		
+		driver.manage().window().maximize();
+		//driver.switchTo().alert().dismiss();
+		
+		driver.findElement(By.id("j-close")).click();
+		
+				
+		driver.findElement(By.id("SignInLink")).click();
+		driver.findElement(By.xpath("//*[@href='https://www-tst.horizonhobby.com/LogonForm?']")).click();
+		
+		//driver.findElement(By.className("button large logon_registerBtn")).click();
+		driver.findElement(By.xpath("//*[@name='Register' and @className ='button large logon_registerBtn']")).click();
+		driver.findElement(By.name("logonId")).sendKeys(EmailAddress);
+		driver.findElement(By.name("logonPassword")).sendKeys(Password);
+		driver.findElement(By.name("logonPasswordVerify")).sendKeys(Password);
+		driver.findElement(By.name("firstName")).sendKeys(FirstName);
+		driver.findElement(By.name("lastName")).sendKeys(LastName);
+		driver.findElement(By.name("address1")).sendKeys(address1);
+		driver.findElement(By.name("city")).sendKeys(City);
+		driver.findElement(By.className("zipCodeInput")).sendKeys(ZipCode);
+		driver.findElement(By.name("phone1")).sendKeys(Phone);
+		
+		Select month = new Select(driver.findElement(By.name("birth_month")));
+		month.selectByIndex(4);
+		
+		Select date = new Select(driver.findElement(By.name("birth_date")));
+		date.selectByIndex(23);
+		
+		Select year = new Select(driver.findElement(By.name("birth_year")));
+		year.selectByIndex(50);
+		
+		//driver.findElement(By.linkText("Submit")).click();
+		
+		driver.findElement(By.id("SignOutLink")).click();
+	
+  }
+
+	@Parameters({"EmailAddress1","Password1"})	
+@Test(priority=1)
+ public void SignIn(String EmailAddress1,String Password1) 
+{
+	System.setProperty("webdriver.chrome.driver","D:\\Drivers\\chromedriver.exe");
+	
+	WebDriver driver = new ChromeDriver();
+	driver.get("https://www-tst.horizonhobby.com");
+	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS );
+	
+	driver.manage().window().maximize();
+	//driver.switchTo().alert().dismiss();
+	
+	driver.findElement(By.id("j-close")).click();
+	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS );
+	 driver.findElement(By.id("SignInLink")).click();
+	
+	driver.findElement(By.name("logonId")).sendKeys(EmailAddress1);
+	driver.findElement(By.name("logonPassword")).sendKeys(Password1);
+	driver.findElement(By.className("button large logon_logonBtn")).click();
+	
+	
+	driver.close();
+	
+}	
+
+	@Parameters({"SearchKeyword"})	
+@Test(priority=2)
+ public void Search(String SearchKeyword) 
+{
+    System.setProperty("webdriver.chrome.driver","D:\\Drivers\\chromedriver.exe");
+	
+	WebDriver driver = new ChromeDriver();
+	driver.get("https://www-tst.horizonhobby.com");
+	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS );
+	
+	driver.manage().window().maximize();
+	//driver.switchTo().alert().dismiss();
+	
+	driver.findElement(By.id("j-close")).click();
+	//driver.findElement(By.className("search_input gray_color")).sendKeys(SearchKeyword);
+	driver.findElement(By.xpath("//*[@id=\"SimpleSearchForm_SearchTerm\"]")).sendKeys("RTF");
+	
+	Actions action = new Actions(driver);
+	
+	action.sendKeys(Keys.ENTER).build().perform();
+	
+	
+	driver.close();
+	
+}
+
+}

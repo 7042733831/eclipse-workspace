@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <test thread-count="5" name="Test1(failed)">
+    <classes>
+      <class name="TestNG.Assignment3">
+        <parameter name="FirstName" value="Ankur"/>
+        <parameter name="address1" value="H56 Old Street"/>
+        <parameter name="ZipCode" value="122001"/>
+        <parameter name="Phone" value="4089798654"/>
+        <parameter name="LastName" value="Rana"/>
+        <parameter name="City" value="city1"/>
+        <parameter name="EmailAddress" value="assignment3@horizonhooy.com"/>
+        <parameter name="Password" value="ankur123!"/>
+        <methods>
+          <include name="UserRegistration"/>
+        </methods>
+      </class> <!-- TestNG.Assignment3 -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

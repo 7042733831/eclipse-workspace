@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="suite1" duration-ms="40" started-at="2018-11-27T10:00:21Z" finished-at="2018-11-27T10:00:22Z">
+    <groups>
+      <group name="Group2">
+        <method signature="Grouping.User()[pri:0, instance:TestNG.Grouping@51565ec2]" name="User" class="TestNG.Grouping"/>
+        <method signature="Grouping.myAccount()[pri:1, instance:TestNG.Grouping@51565ec2]" name="myAccount" class="TestNG.Grouping"/>
+      </group> <!-- Group2 -->
+    </groups>
+    <test name="test1" duration-ms="40" started-at="2018-11-27T10:00:21Z" finished-at="2018-11-27T10:00:22Z">
+      <class name="TestNG.Grouping">
+        <test-method status="PASS" signature="User()[pri:0, instance:TestNG.Grouping@51565ec2]" name="User" duration-ms="11" started-at="2018-11-27T10:00:22Z" finished-at="2018-11-27T10:00:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- User -->
+        <test-method status="PASS" signature="myAccount()[pri:1, instance:TestNG.Grouping@51565ec2]" name="myAccount" duration-ms="2" started-at="2018-11-27T10:00:22Z" finished-at="2018-11-27T10:00:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myAccount -->
+      </class> <!-- TestNG.Grouping -->
+    </test> <!-- test1 -->
+  </suite> <!-- suite1 -->
+</testng-results>

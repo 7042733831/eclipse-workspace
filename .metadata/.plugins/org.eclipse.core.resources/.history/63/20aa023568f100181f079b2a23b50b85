@@ -1,0 +1,25 @@
+package Tower_Package;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Control_Operations {
+
+	public static void main(String[] args) 
+	
+	{
+        System.setProperty("webdriver.chrome.driver","D:\\Drivers\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.horizonhobby.de");
+		
+		driver.manage().window().maximize();
+		
+		Select lang= new Select(driver.findElement(By.className("lang_options")));
+		//lang.selectByVisibleText("English");
+        lang.selectByIndex(1);
+	}
+
+}
