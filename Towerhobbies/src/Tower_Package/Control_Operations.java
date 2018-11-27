@@ -89,7 +89,7 @@ public class Control_Operations {
 		comm.selectByIndex(1);
 		comm.selectByVisibleText("Switch Commands");
 		
-	
+	 driver.close();
 		
 	
 	}
