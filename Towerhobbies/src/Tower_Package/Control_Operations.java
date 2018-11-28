@@ -17,6 +17,8 @@ public class Control_Operations {
         System.setProperty("webdriver.chrome.driver","D:\\Drivers\\chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
+		
+		//Open site
 		driver.get("https://www.horizonhobby.com");
 		
 		driver.manage().window().maximize();
@@ -24,11 +26,7 @@ public class Control_Operations {
 		driver.findElement(By.id("SignInLink")).click();
 		
 	    driver.findElement(By.linkText("Register")).click();
-	    
-	   
-		   
-		  
-	   
+	
 	    //InputBox
 	    driver.findElement(By.name("logonId")).sendKeys("ankur.rana@ondemandaility.com");
 	    
@@ -39,13 +37,9 @@ public class Control_Operations {
 	    //DropDown
 	    Select year= new Select(driver.findElement(By.id("hobby_years")));
 	    
-	   // year.selectByIndex(2);
-	    
 	    year.selectByVisibleText("1-3 years");
 	    	        
 	    year.selectByValue("3");
-	    
-	    //driver.findElement(By.className("WC_UserRegistrationUpdateForm_FormInput_enrollInRewards_In_Register_1")).click();	 
 	    
 	    //CheckBox
 		driver.findElement(By.name("enrollInRewards")).click();
@@ -62,8 +56,7 @@ public class Control_Operations {
 		//HyperLink		
 		driver.findElement(By.linkText("Privacy Policy")).click();
 		
-		//driver.get("https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm");
-		
+		//Control Getting back to Parent window by closing child window
 		String parentWindow = driver.getWindowHandle();
 		Set<String> handles =  driver.getWindowHandles();
 		   for(String windowHandle  : handles)
@@ -89,7 +82,7 @@ public class Control_Operations {
 		comm.selectByIndex(1);
 		comm.selectByVisibleText("Switch Commands");
 		
-	 driver.close();
+	    driver.close();
 		
 	
 	}
